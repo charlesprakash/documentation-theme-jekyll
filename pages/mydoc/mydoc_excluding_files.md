@@ -5,7 +5,7 @@ last_updated: July 3, 2016
 keywords: exclusion, separating outputs, removing files from outputs
 summary: "By default, all the files in your Jekyll project are included in the output (this differs from DITA projects, which don't include files unless noted on the map). If you're single sourcing, you'll need to exclude the files that shouldn't be included in the output. The sidebar doesn't control inclusion or exclusion."
 sidebar: mydoc_sidebar
-permalink: mydoc_exluding_files.html
+permalink: mydoc_exluding_files
 folder: mydoc
 ---
 
@@ -26,8 +26,8 @@ If you have different outputs for your site, you'll want to customize the exclud
 ## Exclude strategies
 Here's the process I recommend. Put all files in the root directory of your project. Suppose one project's name is alpha and the other is beta. Then name each file as follows:
 
-* alpha_sample.html
-* beta_sample.html
+* alpha_sample
+* beta_sample
 
 In your exclude list for your beta project, specify it as follows:
 
@@ -45,8 +45,8 @@ exclude:
 
 If you have more sophisticated exclusion, add another level to your file names. For example, if you have different programming languages you want to filter by, add this:
 
-* alpha_java_sample.html
-* alpha_cpp_sample.html
+* alpha_java_sample
+* alpha_cpp_sample
 
 Then you exclude files for your Alpha C++ project as follows:
 

@@ -5,7 +5,7 @@ last_updated: July 3, 2016
 keywords: API, content API, UI text, inline help, context-sensitive help, popovers, tooltips
 summary: "You can loop through files and generate a JSON file that developers can consume like a help API. Developers can pull in values from the JSON into interface elements, styling them as popovers for user interface text, for example. The beauty of this method is that the UI text remains in the help system (or at least in a single JSON file delivered to the dev team) and isn't hard-coded into the UI."
 sidebar: mydoc_sidebar
-permalink: mydoc_help_api.html
+permalink: mydoc_help_api
 folder: mydoc
 ---
 
@@ -13,9 +13,9 @@ folder: mydoc
 
 You can create a help API that developers can use to pull in content.
 
-For the full code demo, see the notes in the [Tooltips file](tooltips.html).
+For the full code demo, see the notes in the [Tooltips file](tooltips).
 
-In this demo, the popovers pull in and display content from the information in a <a target="_blank" href="tooltips.json">tooltips.json</a> file located in the same directory.
+In this demo, the popovers pull in and display content from the information in a <a target="_blank" href='{{ "tooltips.json" | relative_url }}'>tooltips.json</a> file located in the same directory.
 
 Instead of placing the JSON source in the same directory, you could also host the JSON file on another site.
 
@@ -134,7 +134,7 @@ This code will loop through all pages in the tooltips collection and insert the 
 }
 ```
 
-You can also view the same JSON file here: <a target="_blank" href="tooltips.json">tooltips.json</a>.
+You can also view the same JSON file here: <a target="_blank" href='{{ "tooltips.json" | relative_url }}'>tooltips.json</a>.
 
 You can add different fields depending on how you want the JSON to be structured. Here we just have to fields: `doc_id` and `body`. And the JSON is looking just in the tooltips collection that we created.
 
@@ -236,7 +236,7 @@ Developers can access the help using the `.get` method from jQuery, among other 
              });{% endraw %}
 ```
 
-View the <a target="_blank" href="tooltips.html" class="noCrossRef">tooltip demo</a> for a demonstration. See the source code for full code details.
+View the <a target="_blank" href='{{ "tooltips" | relative_url }}' class="noCrossRef">tooltip demo</a> for a demonstration. See the source code for full code details.
 
 The `url` in the demo is relative, but you could equally point it to an absolute path on a remote host assuming CORS is enabled on the host.
 
@@ -270,11 +270,11 @@ $(document).ready(function(){
     });
 ```
 
-Again, see the <a class="noCrossRef" href="tooltips.html">Tooltip Demo</a> for a demo of the full code.
+Again, see the <a class="noCrossRef" href='{{ "tooltips" | relative_url }}'>Tooltip Demo</a> for a demo of the full code.
 
 Note that even though you reference a Bootstrap JS script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
 
-View the source code of the <a target="_blank" href="tooltips.html" class="noCrossRef">tooltip demo</a> for the full comments.
+View the source code of the <a target="_blank" href='{{ "tooltips" | relative_url }}' class="noCrossRef">tooltip demo</a> for the full comments.
 
 ## 8. Create easy links to embed the help in your help site
 

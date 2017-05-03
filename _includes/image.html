@@ -1,1 +1,17 @@
-<figure>{% if {{include.url}} %}<a class="no_icon" target="_blank" href="{{include.url}}">{% endif %}<img class="docimage" src="images/{{include.file}}" alt="{{include.alt}}" {% if {{include.max-width}} %}style="max-width: {{include.max-width}}px"{% endif %} />{% if {{include.url}} %}</a>{% endif %}{% if {{include.caption}} %}<figcaption>{{include.caption}}</figcaption>{% endif %}</figure>
+<figure>
+    {% if {{include.url}} %}
+        {% capture incurl %}{{ include.url | remove_first: "://" }}{% endcapture %}
+        {% capture alink %}
+            {% if include.url == incurl %}
+                {{ include.url | relative_url }}
+            {% else %}
+                {{ include.url }}
+            {% endif %}
+        {% endcapture %}
+        <a class="no_icon" target="_blank" href="{{ alink | strip_newlines | remove: ' ' }}">
+    {% endif %}
+    <img class="docimage" src='{{ "images/" | append: include.file | relative_url }}' alt="{{include.alt}}"
+        {% if {{include.max-width}} %}style="max-width: {{include.max-width}}px"{% endif %} />
+    {% if {{include.url}} %}</a>{% endif %}
+    {% if {{include.caption}} %}<figcaption>{{include.caption}}</figcaption>{% endif %}
+</figure>

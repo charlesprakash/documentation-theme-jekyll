@@ -1,6 +1,6 @@
 ---
 title: Generating PDFs
-permalink: mydoc_generating_pdfs.html
+permalink: mydoc_generating_pdfs
 tags: [publishing, single_sourcing, content_types]
 keywords: PDF, prince, prince XML, ant, xsl fo
 last_updated: July 3, 2016
@@ -23,7 +23,7 @@ Also, creating a PDF this way gives you a lot more control and customization cap
 
 You can see an example of the finished product here:
 
-<a target="_blank" class="noCrossRef" href="{{ "pdf/mydoc.pdf"}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" class="noCrossRef" href="{{ "pdf/mydoc.pdf" | relative_url }}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
 
 ## 1. Set up Prince
 
@@ -64,7 +64,7 @@ Also note that there's a `output: pdf` toggle in case you want to make some of y
 
 In the configuration file, customize the values for the `print_title` and `print_subtitle` that you want. These will appear on the title page of the PDF.
 
-## 3. Make sure your sidebar_doc.yml file has a titlepage.html and tocpage.html
+## 3. Make sure your sidebar_doc.yml file has a titlepage and tocpage
 
 There are two template pages in the root directory that are critical to the PDF:
 
@@ -144,7 +144,7 @@ This style sets the page margins:
 
 To set a specific style property for a particular page, you have to name the page. This allows Prince to identify the page.
 
-First you add frontmatter to the page that specifies the type. For the titlepage.html, here's the frontmatter:
+First you add frontmatter to the page that specifies the type. For the titlepage, here's the frontmatter:
 
 ```yaml
 ---
@@ -348,7 +348,7 @@ You can add a download button for your PDF using some Bootstrap button code:
 
 Here's what that looks like:
 
-<a target="_blank" class="noCrossRef" href={{ "pdf/mydoc.pdf"}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" class="noCrossRef" href={{ "pdf/mydoc.pdf" | relative_url }}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
 
 ## JavaScript conflicts
 

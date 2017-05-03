@@ -5,18 +5,18 @@ entries:
 
     folderitems:
     - title: Bananas
-      url: bananas.html
+      url: bananas
 
       subfolder:
       - title: Apples
 
         subfolderitems:
         - title:  Fuji apples
-          url: fuji_apples.html
+          url: fuji_apples
 
 
         - title: Gala apples
-          url: gala_apples.html
+          url: gala_apples
 
 name:
   husband: Tom

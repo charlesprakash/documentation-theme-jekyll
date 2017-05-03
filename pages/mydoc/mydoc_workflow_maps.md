@@ -5,7 +5,7 @@ keywords: release notes, announcements, what's new, new features
 last_updated: July 16, 2016
 summary: "Version 6.0 of the Documentation theme for Jekyll reverts back to relative links so you can view the files offline. Additionally, you can store pages in subdirectories. Templates for alerts and images are available."
 sidebar: mydoc_sidebar
-permalink: mydoc_workflow_maps.html
+permalink: mydoc_workflow_maps
 folder: mydoc
 ---
 
@@ -23,15 +23,15 @@ You can implement workflow maps at the top of your pages. This is helpful if you
 
     ```xml  
     <div id="userMap">
-    <div class="content"><a href="p2_sample1.html"><div class="box box1">Connect to ADB</div></a></div>
+    <div class="content"><a href='{{ "p2_sample1.html" | relative_url }}'><div class="box box1">Connect to ADB</div></a></div>
     <div class="arrow">→</div>
-    <div class="content"><a href="p2_sample2.html"><div class="box box2">Download and Build the Starter Kit</div></a></div>
+    <div class="content"><a href='{{ "p2_sample2.html" | relative_url }}'><div class="box box2">Download and Build the Starter Kit</div></a></div>
     <div class="arrow">→</div>
-    <div class="content"><a href="p2_sample3.html"><div class="box box3">Take a Tour</div></a></div>
+    <div class="content"><a href='{{ "p2_sample3.html" | relative_url }}'><div class="box box3">Take a Tour</div></a></div>
     <div class="arrow">→</div>
-    <div class="content"><a href="p2_sample4.html"><div class="box box4">Load Your Widgets</div></a></div>
+    <div class="content"><a href='{{ "p2_sample4.html" | relative_url }}'><div class="box box4">Load Your Widgets</div></a></div>
     <div class="arrow">→</div>
-    <div class="content"><a href="p2_sample5.html"><div class="box box5">Query for Something</div></a></div>
+    <div class="content"><a href='{{ "p2_sample5.html" | relative_url }}'><div class="box box5">Query for Something</div></a></div>
     <div class="clearfix"></div>
     </div>
     ```

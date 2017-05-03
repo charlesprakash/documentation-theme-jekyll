@@ -6,7 +6,7 @@ keywords: links, hyperlinks, cross references, related links, relationship table
 summary: "When creating links, you can use standard HTML or Markdown formatting. However, you can also implement an automated approach to linking that makes linking much less error-prone (meaning less chances of broken links in your output) and requiring less effort."
 last_updated: July 3, 2016
 sidebar: mydoc_sidebar
-permalink: mydoc_hyperlinks.html
+permalink: mydoc_hyperlinks
 folder: mydoc
 ---
 
@@ -23,7 +23,7 @@ When linking to an external site, use Markdown formatting because it's simplest:
 When linking to internal pages, you can manually link to the pages like this:
 
 ```
-[Icons](mydoc_icons.html)
+[Icons](mydoc_icons)
 ```
 
 However, if you change the file name, you'll have to update all of your links. It's much easier to use Automated links, as described in the next section.
@@ -81,18 +81,18 @@ Then add a property into the other.yml file in your \_data/sidebars folder:
 
 ```yaml
     - title: Some link bookmark
-      url: /mydoc_pages.html#someIdTag
+      url: /mydoc_pages#someIdTag
 ```
 
 And reference it like this:
 
 ```
-This is [Some link][mydoc_pages.html#someIdTag].
+This is [Some link][mydoc_pages#someIdTag].
 ```
 
 **Result:**
 
-This is [Some link][mydoc_pages.html#someIdTag].
+This is [Some link][mydoc_pages#someIdTag].
 
 It's a little strange having the `.html#` in a reference like this, but it works.
 

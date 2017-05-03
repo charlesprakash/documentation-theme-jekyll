@@ -5,13 +5,13 @@ keywords: series, connected articles, tutorials, hello world
 last_updated: July 3, 2016
 summary: "You can automatically link together topics belonging to the same series. This helps users know the context within a particular process."
 sidebar: mydoc_sidebar
-permalink: mydoc_series.html
+permalink: mydoc_series
 folder: mydoc
 ---
 
 ## Using series for pages
 
-You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a <a href="mydoc_seriesdemo1.html">demo</a>.
+You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a <a href='{{ "mydoc_seriesdemo1" | relative_url }}'>demo</a>.
 
 ## 1. Create the series button
 
@@ -30,7 +30,7 @@ First create an include that contains your series button:
             <li class="active"> → {{p.weight}}. {{p.title}}</li>
             {% else %}
             <li>
-                <a href="{{p.url | remove: "/"}}">{{p.weight}}. {{p.title}}</a>
+                <a href="{{p.url | relative_url }}">{{p.weight}}. {{p.title}}</a>
             </li>
             {% endif %}
             {% endif %}
@@ -58,7 +58,7 @@ Now create another include for the Next button at the bottom of the page. Copy t
     {% if p.series == "ACME series" %}
     {% assign nextTopic = page.weight | plus: "1"  %}
     {% if p.weight == nextTopic  %}
-    <a href="{{p.url}}"><button type="button" class="btn btn-primary">Next: {{p.weight}}  {{p.title}}</button></a>
+    <a href="{{p.url | relative_url }}"><button type="button" class="btn btn-primary">Next: {{p.weight}}  {{p.title}}</button></a>
     {% endif %}
     {% endif %}
     {% endfor %}

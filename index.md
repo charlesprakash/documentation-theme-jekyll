@@ -3,7 +3,8 @@ title: Getting started with the Documentation Theme for Jekyll
 keywords: sample homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
-permalink: index.html
+hide_sidebar: true
+permalink: /
 summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 ---
 
@@ -158,23 +159,23 @@ entries:
     folderitems:
 
     - title: Get started
-      url: /index.html
+      url: /
       output: web, pdf
 
     - title: Introduction
-      url: /mydoc_introduction.html
+      url: /mydoc_introduction
       output: web, pdf
 
     - title: Supported features
-      url: /mydoc_supported_features.html
+      url: /mydoc_supported_features
       output: web, pdf
 
     - title: About the theme author
-      url: /mydoc_about.html
+      url: /mydoc_about
       output: web, pdf
 
     - title: Support
-      url: /mydoc_support.html
+      url: /mydoc_support
       output: web, pdf
 
   - title: Release Notes
@@ -182,11 +183,11 @@ entries:
     folderitems:
 
     - title: 6.0 Release notes
-      url: /mydoc_release_notes_60.html
+      url: /mydoc_release_notes_60
       output: web, pdf
 
     - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
+      url: /mydoc_release_notes_50
       output: web, pdf
 
 ```
@@ -236,7 +237,7 @@ keywords: keyword1, keyword2, keyword3
 last_updated: Month day, year
 summary: "optional summary here"
 sidebar: sidebarname
-permalink: filename.html
+permalink: filename
 ---
 ```
 
@@ -318,7 +319,7 @@ See the topics under "Formatting" in the sidebar for more information.
 
 ## Automated links
 
-If you want to use an automated system for managing links, see [Automated Links][mydoc_hyperlinks.html#automatedlinks]. This approach automatically creates a list of Markdown references to simplify linking.
+If you want to use an automated system for managing links, see [Automated Links](mydoc_hyperlinks#automatedlinks). This approach automatically creates a list of Markdown references to simplify linking.
 
 ## Other instructions
 

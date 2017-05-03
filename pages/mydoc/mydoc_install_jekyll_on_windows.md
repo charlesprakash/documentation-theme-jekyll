@@ -1,6 +1,6 @@
 ---
 title: Install Jekyll on Windows
-permalink: mydoc_install_jekyll_on_windows.html
+permalink: mydoc_install_jekyll_on_windows
 keywords: jekyll on windows, pc, ruby, ruby dev kit
 sidebar: mydoc_sidebar
 folder: mydoc

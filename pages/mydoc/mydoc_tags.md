@@ -6,7 +6,7 @@ last_updated: July 16, 2016
 keywords: tags, navigation, buttons, links, association
 summary: "Tags provide another means of navigation for your content. Unlike the table of contents, tags can show the content in a variety of arrangements and groupings. Implementing tags in this Jekyll theme is somewhat of a manual process."
 sidebar: mydoc_sidebar
-permalink: mydoc_tags.html
+permalink: mydoc_tags
 folder: mydoc
 ---
 
@@ -16,7 +16,7 @@ You can add tags to pages by adding `tags` in the frontmatter with values inside
 ```
 ---
 title: 5.0 Release Notes
-permalink: release_notes_5_0.html
+permalink: release_notes_5_0
 tags: [formatting, single_sourcing]
 ---
 ```
@@ -62,7 +62,7 @@ Tags have a few components.
 title: "Collaboration pages"
 tagName: collaboration
 search: exclude
-permalink: tag_collaboration.html
+permalink: tag_collaboration
 sidebar: mydoc_sidebar
 ---
 {% include taglogic.html %}
@@ -83,7 +83,7 @@ sidebar: mydoc_sidebar
 {% assign projectTags = site.data.tags.allowed-tags %}
 {% for tag in page.tags %}
 {% if projectTags contains tag %}
-<a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+<a href="{{ "tag_" | append: tag | relative_url }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -106,7 +106,7 @@ Getting started pages:
 {% for page in site.pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url | remove: "/" }}">{{page.title}}</a></li>
+<li><a href="{{page.url | relative_url }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -121,7 +121,7 @@ Getting started pages:
 {% for page in site.pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url | remove: "/" }}">{{page.title}}</a></li>
+<li><a href="{{page.url | relative_url }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -137,7 +137,7 @@ Getting started pages:
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url | remove: "/" }}">{{page.title}}</a></li>
+<li><a href="{{page.url | relative_url }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -153,7 +153,7 @@ Getting started pages:
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url | remove: "/"}}">{{page.title}}</a></li>
+<li><a href="{{page.url | relative_url }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}

@@ -4,7 +4,7 @@ tags: [special_layouts]
 last_updated: November 30, 2015
 keywords: shuffle, card layout, dynamic grid, doc portal, support portal
 summary: "This layout shows an example of a knowledge-base style navigation system, where there is no hierarchy, just groups of pages that have certain tags."
-permalink: mydoc_shuffle.html
+permalink: mydoc_shuffle
 sidebar: mydoc_sidebar
 folder: mydoc
 ---
@@ -43,7 +43,7 @@ folder: mydoc
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "getting_started" %}
-                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                  <li><a href="{{ page.url | relative_url }}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %} 
@@ -64,7 +64,7 @@ folder: mydoc
                     {% for page in site.pages %}
                     {% for tag in page.tags %}
                     {% if tag == "content-types" %}
-                    <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                    <li><a href="{{ page.url | relative_url }}">{{page.title}}</a></li>
                     {% endif %}
                     {% endfor %}
                     {% endfor %}
@@ -86,7 +86,7 @@ folder: mydoc
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "formatting" %}
-                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                  <li><a href="{{ page.url | relative_url }}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
@@ -105,7 +105,7 @@ folder: mydoc
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "single_sourcing" %}
-                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                  <li><a href="{{ page.url | relative_url }}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %} 
@@ -124,7 +124,7 @@ folder: mydoc
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "publishing" %}
-                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                  <li><a href="{{ page.url | relative_url }}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
@@ -144,7 +144,7 @@ folder: mydoc
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "special_layouts" %}
-                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                     <li><a href="{{ page.url | relative_url }}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %} 

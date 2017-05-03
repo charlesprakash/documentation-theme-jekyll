@@ -5,7 +5,7 @@ keywords: search, json, configuration, findability
 last_updated: July 3, 2016
 summary: "The search feature uses JavaScript to look for keyword matches in a JSON file. The results show instant matches, but it doesn't provide a search results page like Google. Also, sometimes invalid formatting can break the JSON file."
 sidebar: mydoc_sidebar
-permalink: mydoc_search_configuration.html
+permalink: mydoc_search_configuration
 folder: mydoc
 ---
 
@@ -63,7 +63,7 @@ search: exclude
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
-"url": "{{ page.url | remove: "/"}}",
+"url": "{{ page.url | relative_url }}",
 "summary": "{{page.summary | strip }}"
 },
 {% endunless %}

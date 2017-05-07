@@ -24,7 +24,7 @@ entries:
     folderitems:
 
     - title: Get started
-      url: /
+      url: /mydoc_index
       output: web, pdf
       type: homepage
 

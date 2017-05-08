@@ -29,6 +29,7 @@ The following customizations are currently implemented:
 * Left align the logo in the footer
 * Align the disqus comments across the width of the page container
 * Remove extensions in the URLs and make all URLs relative. So now you can use the `baseurl` flag in `_config.yml` and have the docs generate to a subfolder and use `| relative_url` filter to convert a URL to a relative URL based on `baseurl`.
+* Fixes the sidebar on the page from floating. Sometimes floating sidebar covers the footer area (since we aligned the footer across the width of the page container).
 
 <br /><br />
 Get started [here](/mydoc_index)
